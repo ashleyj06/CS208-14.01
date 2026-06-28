@@ -43,7 +43,7 @@ router.post('/create', function (req, res, next) {
       return res.redirect('/comments');
     }
     try {
-      req.db.query('INSERT INTO comments (task) VALUES (?);', [task.trim()], (err, results) => {
+      req.db.query('INSERT INTO todos (task) VALUES (?);', [task.trim()], (err, results) => {
         if (err) {
           console.error('Error adding comment:', err);
           return res.status(500).send('Error adding comment');
