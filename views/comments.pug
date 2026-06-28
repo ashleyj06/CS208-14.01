@@ -7,7 +7,7 @@ block content
     // Display an error message if one exists
     if error
         p.error= error
-
+    input(type="text", name="task", id="task", maxlength="500", required)
     ol 
         each val in todos 
             li 

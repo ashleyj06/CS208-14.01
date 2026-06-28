@@ -18,10 +18,10 @@ router.get('/about', function(req, res){
 
 /* Comments page */
 router.get('/comments', function(req, res){
-  req.db.query('SELECT * FROM comments;', (err, results) => {
+  req.db.query('SELECT * FROM todos;', (err, results) => {
       if(err){
         console.error(err);
-        return res.status(500).send('comments', {
+        return res.status(500).render('comments', {
           title: 'Customer Comments',
           todos: [],
           error: 'Sorry, customer comments are unavailable at the moment. Please try again later.'
@@ -62,7 +62,7 @@ router.post('/create', function (req, res, next) {
 router.post('/delete', function (req, res, next) {
     const { id } = req.body;
     try {
-      req.db.query('DELETE FROM comments WHERE id = ?;', [id], (err, results) => {
+      req.db.query('DELETE FROM todos WHERE id = ?;', [id], (err, results) => {
         if (err) {
           console.error('Error deleting comment:', err);
           return res.status(500).send('Error deleting comment');

@@ -48,7 +48,7 @@ Start the application using the following command:
 npm start
 ```
 ## Edge Cases
-- 
+- It displays this message: Sorry customer comments are unavailable right now. Please try again later. 
 - It says please fill out this field and wont show the whitespace comment
 - 
 - If the user rapidly double clicks the submit button it will make two of the same comments
