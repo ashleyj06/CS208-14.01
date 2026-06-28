@@ -47,6 +47,11 @@ Start the application using the following command:
 ```bash
 npm start
 ```
+## Edge Cases
+- 
+- It says please fill out this field and wont show the whitespace comment
+- 
+- If the user rapidly double clicks the submit button it will make two of the same comments
 
 ## Source
 Chatgpt:[https//chatgpt.com](https://chatgpt.com)

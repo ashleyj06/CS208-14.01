@@ -18,22 +18,22 @@ router.get('/about', function(req, res){
 
 /* Comments page */
 router.get('/comments', function(req, res){
-  try{
-    req.db.query('SELECT * FROM todos;', (err, results) => {
+  req.db.query('SELECT * FROM comments;', (err, results) => {
       if(err){
-        console.error('Error fetching comments:', err);
-        return res.status(500).send('Error fetching comments');
+        console.error(err);
+        return res.status(500).send('comments', {
+          title: 'Customer Comments',
+          todos = [],
+          error: 'Sorry, customer comments are unavailable at the moment. Please try again later.'
+        });
       }
 
       res.render('comments',{
         title: 'Customer Comments',
-        todos: results
+        todos: results,
+        error: null
       });
     });
-  }catch(error){
-    console.error('Error fetching comments:', error);
-    res.status(500).send('Error fetching comments');
-  }
 });
 
 /* Add comment */
@@ -43,7 +43,7 @@ router.post('/create', function (req, res, next) {
       return res.redirect('/comments');
     }
     try {
-      req.db.query('INSERT INTO todos (task) VALUES (?);', [task.trim()], (err, results) => {
+      req.db.query('INSERT INTO comments (task) VALUES (?);', [task.trim()], (err, results) => {
         if (err) {
           console.error('Error adding comment:', err);
           return res.status(500).send('Error adding comment');
@@ -62,7 +62,7 @@ router.post('/create', function (req, res, next) {
 router.post('/delete', function (req, res, next) {
     const { id } = req.body;
     try {
-      req.db.query('DELETE FROM todos WHERE id = ?;', [id], (err, results) => {
+      req.db.query('DELETE FROM comments WHERE id = ?;', [id], (err, results) => {
         if (err) {
           console.error('Error deleting comment:', err);
           return res.status(500).send('Error deleting comment');
