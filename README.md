@@ -54,4 +54,4 @@ npm start
 - If the user rapidly double clicks the submit button it will make two of the same comments
 
 ## Source
-Chatgpt:[https//chatgpt.com](https://chatgpt.com)
+Chatgpt: [https//chatgpt.com] (https://chatgpt.com)
