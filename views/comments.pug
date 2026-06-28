@@ -7,15 +7,16 @@ block content
     // Display an error message if one exists
     if error
         p.error= error
-    input(type="text", name="task", id="task", maxlength="500", required)
-    ol 
-        each val in todos 
-            li 
-                span= val.task + ' '
+    
+    if todos.length
+        ol 
+            each val in todos 
+                li 
+                    span= val.task + ' '
                 
-                form(method="POST" action="/delete")
-                    input(type="hidden", name="id", value=val.id)
-                    button(type="submit") Delete
+                    form(method="POST" action="/delete")
+                        input(type="hidden", name="id", value=val.id)
+                        button(type="submit") Delete
     hr
 
     h2 Leave a Comment 
@@ -23,6 +24,6 @@ block content
     form(method="POST" action="/create")
         label(for="task") Comment: 
 
-        input(type="text" name="task" id="task" required)
+        input(type="text" name="task" id="task", maxlength="500", required)
 
         button(type="submit") Submit

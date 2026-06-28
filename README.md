@@ -50,7 +50,7 @@ npm start
 ## Edge Cases
 - It displays this message: Sorry customer comments are unavailable right now. Please try again later. 
 - It says please fill out this field and wont show the whitespace comment
-- 
+- It will say there is an error if their is more than 500 characters for the comments
 - If the user rapidly double clicks the submit button it will make two of the same comments
 
 ## Source
