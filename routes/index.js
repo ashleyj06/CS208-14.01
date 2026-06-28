@@ -23,7 +23,7 @@ router.get('/comments', function(req, res){
         console.error(err);
         return res.status(500).send('comments', {
           title: 'Customer Comments',
-          todos = [],
+          todos: [],
           error: 'Sorry, customer comments are unavailable at the moment. Please try again later.'
         });
       }
