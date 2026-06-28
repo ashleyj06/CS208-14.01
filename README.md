@@ -5,7 +5,7 @@
 
 ## Project Discription
 This is a full-stack application for CS208, built with Node.js, Express, and
-MariaDB (MySQL). Its a To-Do List web application that allows users to view tasks, create new tasks, edit task descriptions, mark tasks as completed, and delete tasks. 
+MariaDB (MySQL). The application is a website for Downtown Donuts that allows customers to browse niformation about the business, view the menu, learn about the company, and submit customer comments. The website features multiple pages, a responsive design, and a database-backed customer comment system.
 
 ## Install the Database Tables
 To set up the database, run `install_db.sh`. This script will install MariaDB and start the server running. You only need to run this script once per
@@ -49,4 +49,4 @@ npm start
 ```
 
 ## Source
-Chatgpt
+Chatgpt:[https//chatgpt.com](https://chatgpt.com)
