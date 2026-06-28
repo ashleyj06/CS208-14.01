@@ -1,0 +1,24 @@
+extends layout 
+
+block content 
+
+    h1 Customer Comments 
+
+    ol 
+        each val in todos 
+            li 
+                span= val.task + ' '
+                
+                form(method="POST" action="/delete")
+                    input(type="hidden", name="id", value=val.id)
+                    button(type="submit") Delete
+    hr
+
+    h2 Leave a Comment 
+
+    form(method="POST" action="/create")
+        label(for="task") Comment: 
+
+        input(type="text" name="task" id="task" required)
+
+        button(type="submit") Submit

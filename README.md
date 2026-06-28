@@ -1,11 +1,52 @@
-# CS208 Full Stack Final Project
+# CS208 Full Stack-Final Project
+- Name: Ashley Johnson
+- GitHub:[https//github.com/ashleyj06](https://github.com/ashleyj06)
+- Term: Summer 2026
 
-## Documentation
+## Project Discription
+This is a full-stack application for CS208, built with Node.js, Express, and
+MariaDB (MySQL). Its a To-Do List web application that allows users to view tasks, create new tasks, edit task descriptions, mark tasks as completed, and delete tasks. 
 
-- Running the example project is documented [here](docs/example_project.md)
-- An example README is provided [here](docs/README_example.md)
+## Install the Database Tables
+To set up the database, run `install_db.sh`. This script will install MariaDB and start the server running. You only need to run this script once per
+Codespace.
 
-Students must **replace** this README with a README that is specific to your
-project. **IMPORTANT**: If you do not complete the README, your project will not
-be graded, and you will receive a zero. The TA will not guess how to set up,
-configure, and run your project.
+```bash
+./setup_scripts/install_db.sh
+```
+
+Use the following for questions that the script asks:
+
+- Switch to unix_socket authentication [Y/n] n
+- Change the root password? [Y/n] Y
+- Set the password to 12345
+- Remove anonymous users? [Y/n] Y
+- Disallow root login remotely? [Y/n] Y
+- Remove test database and access to it? [Y/n] Y
+- Reload privilege tables now? [Y/n] Y
+
+Test to make sure the db is running:
+
+```bash
+sudo service mariadb status
+```
+
+## Create the Database Tables
+Creat the inital tables by running the following command:
+
+```bash
+sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
+```
+## Install Dependencies
+Install the required dependencies using npm:
+```bash
+npm install
+```
+## Run Application
+Start the application using the following command:
+```bash
+npm start
+```
+
+## Source
+Chatgpt

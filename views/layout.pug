@@ -2,6 +2,22 @@ doctype html
 html
   head
     title= title
+    link(rel="icon", type="image/png", href="/images/downtownDonutsw.png")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Italianno&display=swap", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    header
+      h1 Downtown Donuts
+
+      nav
+        a(href="/") Home
+        |  |
+        a(href="/menu") Menu
+        |  |
+        a(href="/about") About Us
+        |  |
+        a(href="/comments") Comments 
+
     block content
