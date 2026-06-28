@@ -4,7 +4,7 @@ body {
   color: black;
   margin: 0;
 }
-
+/*Adds a logo to the leader */
 header{
   background-image: url("/images/downtownDonutsd.png");
   background-size: cover;
