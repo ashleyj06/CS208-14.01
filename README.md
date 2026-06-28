@@ -1,6 +1,6 @@
 # CS208 Full Stack-Final Project
 - Name: Ashley Johnson
-- GitHub:[https//github.com/ashleyj06](https://github.com/ashleyj06)
+- GitHub: [https//github.com/ashleyj06] (https://github.com/ashleyj06)
 - Term: Summer 2026
 
 ## Project Discription
