@@ -1,4 +1,4 @@
-# CS208 Full Stack-Final Project
+# CS208 Full Stack Final Project-Downtown Donuts
 - Name: Ashley Johnson
 - GitHub: [https//github.com/ashleyj06] (https://github.com/ashleyj06)
 - Term: Summer 2026
